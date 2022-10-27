@@ -18,6 +18,15 @@
       "mode": "view"
     }
   ],
+  "preferences": [
+    {
+      "name": "static-mark-yaml-url",
+      "description": "The url where your static marks yaml is located",
+      "type": "textfield",
+      "required": true,
+      "title": "Static Marks Yaml URL"
+    }
+  ],
   "dependencies": {
     "@raycast/api": "^1.41.1",
     "@raycast/utils": "^1.4.8",

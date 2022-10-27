@@ -1,4 +1,4 @@
-import {ActionPanel, Action, List} from "@raycast/api";
+import {ActionPanel, Action, List, getPreferenceValues} from "@raycast/api";
 import {useFetch, Response} from "@raycast/utils";
 import {useState} from "react";
 import YAML from 'yaml';
@@ -7,7 +7,7 @@ export default function Command() {
     const [searchText, setSearchText] = useState("");
 
     const {data, isLoading} = useFetch(
-        "https://raw.githubusercontent.com/aerobless/bookmarks/master/bookmarks.yml",
+        getPreferenceValues()['static-mark-yaml-url'],
         {
             parseResponse: parseFetchYamlResponse,
         }
@@ -19,7 +19,7 @@ export default function Command() {
         <List
             isLoading={isLoading}
             onSearchTextChange={setSearchText}
-            searchBarPlaceholder="Search npm packages..."
+            searchBarPlaceholder="Search bookmarks..."
             throttle
         >
             <List.Section title="Results" subtitle={filteredData?.length + ""}>
