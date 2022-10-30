@@ -1,30 +1,32 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "static-marks",
-  "title": "Static Marks",
-  "description": "Use a Static Marks Yaml File to provide quick access to bookmarks",
+  "title": "Static Marks - Bookmark Search",
+  "description": "Search and launch websites from your Static Marks bookmark YAML file.",
   "icon": "command-icon.png",
   "author": "aerobless",
   "categories": [
+    "Productivity",
     "Web"
   ],
   "license": "MIT",
   "commands": [
     {
       "name": "index",
-      "title": "bookmarks",
-      "subtitle": "Launch websites from your bookmarks",
-      "description": "Searches through a Static Marks yaml file to launch websites from your bookmarks.",
+      "title": "Search Bookmarks",
+      "subtitle": "Static Marks",
+      "description": "Search your Static Marks bookmarks.",
       "mode": "view"
     }
   ],
   "preferences": [
     {
       "name": "static-mark-yaml-url",
-      "description": "The url where your static marks yaml is located",
+      "description": "The url where your Static Marks YAML file is located",
       "type": "textfield",
+      "placeholder": "https://raw.githubusercontent.com/../bookmarks.yml",
       "required": true,
-      "title": "Static Marks Yaml URL"
+      "title": "Static Marks YAML URL"
     }
   ],
   "dependencies": {

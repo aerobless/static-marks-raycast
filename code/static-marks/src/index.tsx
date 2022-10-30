@@ -35,7 +35,6 @@ function SearchListItem({searchResult}: { searchResult: LinkResult }) {
     return (
         <List.Item
             title={searchResult.name}
-            //subtitle={searchResult.description}
             actions={
                 <ActionPanel>
                     <ActionPanel.Section>
